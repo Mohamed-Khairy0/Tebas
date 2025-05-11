@@ -236,3 +236,131 @@ body {
 }
 
 
+/* قسم عرض الشرائح */
+#carousel-featured {
+  background-color: #F7F8F3;
+  height: 400px;
+}
+
+
+#carousel-featured .carousel-item .col-4 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#carousel-featured .carousel-item img {
+  height: 375px;
+  padding-top: 25px;
+}
+#carousel-featured .product-details {
+  border: 1px solid #DDDDD8;
+  padding: 20px;
+  position: relative;
+  top: 50px;
+  height: 200px;
+  background-color: #F7F8F3;
+  
+}
+
+#carousel-featured .product-details h1 {
+  font-weight: 700;
+  font-size: 175%;
+  margin-top: 18px;
+}
+
+#carousel-featured .product-details .product-category {
+    border: 1px solid #E0E0E0;
+  padding: 8px 12px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #F7F8F3; 
+  color: #888888; 
+  font-size: 14px;
+  border-radius: 4px;
+
+}
+
+.sunglasses-img {
+  transform: translateX(30px); 
+  
+}
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 200px;
+  padding: 10px 0;
+  background: #dc3545; /* لون الشارة */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transform: rotate(-45deg); /* الميلان */
+  top: 30px;
+  left: -50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size: 15px;
+}
+
+@media (max-width: 576px) {
+  .ribbon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ribbon span {
+    width: 140px;
+    font-size: 12px;
+    top: 25px;
+    left: -40px;
+  }
+}
+
+.custom-carousel-indicators-primary {
+  height: 70px !important;
+  width: 70px !important;
+  opacity: 1 !important;
+  border: 2px solid #ddd !important;
+  margin: 0 !important;
+  margin-left: 5px !important;
+}
+
+.custom-carousel-indicators {
+  top: 235px;
+  right: 41%;
+  
+}
+
+.custom-carousel-indicators-primary.active {
+  
+  border-color: #007bff !important;
+  opacity: 1 !important;
+}
+
+#carousel-featured .carousel-control-prev .fa-chevron-right,
+#carousel-featured .carousel-control-next .fa-chevron-left {
+  color: #868686;
+  font-size: 38px;
+}
+
+#carousel-featured .carousel-control-prev, #carousel-featured .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
