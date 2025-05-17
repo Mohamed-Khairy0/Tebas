@@ -5,3 +5,18 @@ import '@fortawesome/fontawesome-free/js/all.min';
 
 document.querySelectorAll('[data-bs-toggle="tooltip"]')
   .forEach(item => new bootstrap.Tooltip(item));
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toastElement = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(toastElement);
+
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        toast.show();
+      });
+    });
+  });
+
+
