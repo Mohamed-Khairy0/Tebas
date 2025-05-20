@@ -19,4 +19,5 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]')
     });
   });
 
+document.getElementById("copyright").innerHTML = "جميع الحقوق محفوظة للمتجر سنة " + new Date ().getFullYear()
 

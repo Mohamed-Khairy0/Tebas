@@ -284,7 +284,7 @@ body {
 }
 
 .sunglasses-img {
-  transform: translateX(30px); 
+  transform: translateX(90px); 
   
 }
 
@@ -362,6 +362,14 @@ body {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
+  
+}
+
+
+
+#carousel-featured .carousel-control-prev {
+  right: 15px;
+  left: auto;
 }
 
 #store-features {
@@ -504,8 +512,309 @@ body {
   padding-top: 25px;
 }
 
+
 .brands-logo {
     max-height: 40px;
     width: auto;
     object-fit: contain;
 }
+
+#brand-logos {
+  background-color: #dbeefa;
+  padding: 25px 0;
+  color: #555555;
+}
+
+#brand-logos img {
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#footer-nav {
+  background-color: #1f1e1f;
+  padding: 20px 0 10px;
+  background-image: url(../img/bg_footer_1.png), url(../img/bg_footer_2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 110% 0, -10% -150%;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo-wrapper .reveal-text {
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.footer-nav-links {
+  margin: 30px 0;
+}
+
+.footer-nav-links a {
+  color: #555555;
+  margin-left: 30px;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+.newsletter {
+  border-top: 1px solid #292929;
+}
+.newsletter form {
+  max-width: 260px;
+  
+}
+
+.newsletter form label {
+  margin: 27px 0 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.newsletter form input {
+  background-color: #313131;
+  opacity: 0.6;
+  border: none;
+  height: 38px;
+}
+
+
+#footer-input::placeholder {
+  text-align: right;
+  direction: rtl;
+   color: #aaaaaa;
+  opacity: 1;
+}
+
+.newsletter form button {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-size: 14px;
+  padding: 6px 12px 5px;
+  height: 38px;
+}
+
+#footer-copyright-social {
+  background-color: #151515;
+  color: #303030;
+  padding: 30px 0;
+  font-weight: 700;
+}
+
+#footer-copyright-social a {
+  color: #303030;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+@media (max-width: 1199.98px) {
+  .custom-navbar .navbar-nav li a.nav-link {
+    padding: 7px !important;
+  }
+  #carousel-featured .custom-carousel-indicators {
+    margin-right: 12%;
+  }
+
+}
+
+@media (max-width: 991.98px) {
+  .custom-navbar .container {
+    width: 100% !important;
+    max-width: 100% !important;
+   
+  }
+
+  .custom-navbar {
+    padding: 15px 15px 30px !important;
+  }
+
+  .navbar-header {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 22px !important;
+
+  }
+  .navbar-header .btn-icon {
+    float: left !important;
+  }
+
+  .inline-form {
+    width: 100%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+  }
+  .inline-form .dropdown {
+    display: none;
+  }
+
+  .inline-form .custom-form-control {
+    width: 90%;
+  }
+
+  .inline-form .search-btn {
+    width: 10%;
+  } 
+
+  .custom-navbar .navbar-nav li a.nav-link {
+    padding: 10px 0;
+  }
+
+  .navbar-collapse {
+    
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+
+  #carousel-featured .custom-carousel-indicators {
+    margin-right: 4%;
+  }
+  .sunglasses-img {
+   max-width: 130%;   /* تحكم في حجم الصورة */
+    height: auto;
+    object-fit: contain;
+  transform: translateX(50px); 
+  
+
+  
+}
+
+.yallow-jacket-img {
+  transform: translateX(50px); 
+}
+
+.jens-jacket-img {
+  margin-right: -50px;
+}
+
+.overlay {
+  display: none;
+}
+
+.add-to-cart-btn {
+  color: #868686;
+  border-color: #868686;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.custom-thumbnail img {
+  max-height: 200px;
+   
+}
+
+.image-box {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+#row-brands .carouserl-inner img {
+  width: 200px !important;
+  height: auto !important;
+}
+
+#copyright,
+#social-icons {
+  width: 100%;
+  text-align: center;
+}
+
+#social-icons {
+  font-size: 150%;
+  margin-top: 10px;
+}
+
+
+}  
+
+
+
+@media (max-width: 575.98px) {
+  .inline-form .custom-form-control {
+    width: 80%;
+  }
+  .inline-form .search-btn {
+    width: 20%;
+  } 
+
+  #brand-logos .img-container img { 
+    margin: 5px 15px;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+
+  #carousel-featured{
+    padding-bottom: 25px;
+  }
+
+  #carousel-featured,
+  #carousel-featured .product-details {
+    height: auto;
+
+  }
+
+  #carousel-featured .product-details {
+    top: -2px;
+    text-align: center;
+  }
+
+  #carousel-featured  .carousel-item img {
+    height: 250px;
+  }
+
+  .sunglasses-img {
+  transform: translateX(-30px); 
+  
+}
+
+.yallow-jacket-img {
+  transform: translateX(-30px); 
+}
+
+.custom-thumbnail img {
+  max-height: 250px;
+   
+}
+
+#carousel-most-sold-altrenative .custom-thumbnail img {
+  margin: auto;
+}
+
+#brand-logos img {
+  max-width: 50px;
+  max-height: 50px;
+  margin: 5px 24px 5px 23px;
+}
+
+#footer-nav .footer-logo-wrapper {
+  margin-bottom: 30px;
+}
+
+#footer-nav form {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+  
+}
+
