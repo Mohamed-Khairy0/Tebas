@@ -77,6 +77,61 @@ function calculateTotalPrice(){
     document.getElementById('total-price-for-all-product').innerHTML = totalPriceForAllProduct + "$"
 }
 
+
+const citiesByCountry = {
+  EG: ['القاهرة', 'الجيزة', 'الإسكندرية', 'قنا'],
+  SA: ['الرياض', 'المدينة', 'خميس مشيط', 'مكة'],
+  SY: ['دمشق', 'حلب', 'إدلب', 'حمص'],
+  JD: ['عمان', 'الزرقاء', 'إربد', 'الكرك']
+}
+
+document.querySelectorAll('select[name = "country"]').forEach(item=>{
+  item.addEventListener('change', ()=>{
+    const country = item.value
+    const cities = citiesByCountry[country]
+
+    document.querySelectorAll('#paymentCities option').forEach(option=>option.remove())
+    const firstOption = document.createElement('option')
+    const optionText = document.createTextNode('اختر مدينة')
+    firstOption.appendChild(optionText)
+    firstOption.setAttribute('value', '')
+    firstOption.setAttribute('disabled', 'true')
+    firstOption.setAttribute('selected', 'true')
+
+    const cityOptions = document.getElementById('paymentCities')
+    cityOptions.appendChild(firstOption)
+
+    cities.forEach(city=>{
+      const newOption = document.createElement('option')
+      const optionText = document.createTextNode(city)
+      newOption.appendChild(optionText)
+      newOption.setAttribute('value', city)
+      cityOptions.appendChild(newOption)
+    })
+  })
+})
+
+//إخفاء وإظهار حقول الإدخال للبطاقة الائتمانية
+
+document.querySelectorAll('#form-checkout input[name="payment-method"]').forEach(item=>{
+  item.addEventListener('change', ()=>{
+    const paymentMethod = item.value
+
+    const creditCardInput = document.querySelectorAll('#credit_card_info input');
+
+    if(paymentMethod === 'on_delivery') {
+      creditCardInput.forEach(input=>{
+        input.style.display='none'
+      })
+    } else {
+      creditCardInput.forEach(input=>{
+        input.style.display='block'
+      })
+    }
+
+  })
+})
+
 document.getElementById("copyright").innerHTML = "جميع الحقوق محفوظة للمتجر سنة " + new Date ().getFullYear()
 
 
