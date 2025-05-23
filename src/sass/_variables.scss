@@ -1,0 +1,5 @@
+@use "sass:color";
+$brand-primary: #0d6efd;
+$brand-danger: #ff3956;
+$search-btn-color-dark: color.adjust($brand-primary, $lightness: -15%);
+$btn-danger-color-dark: color.adjust($brand-danger, $lightness: -35%);

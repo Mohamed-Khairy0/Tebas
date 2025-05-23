@@ -1,0 +1,117 @@
+@use './variables' as *;
+@use './custom.table' as table;
+@use './custom.btn' as btn;
+@use 'mixins' as *;
+@use './custom_thumbnail' as *;
+
+
+
+
+.custom-form-control {
+  border: 1px solid #ced4da;
+  box-shadow: none;
+  border-radius: 2px;
+  color: #333;
+  padding: 6px 12px;
+  min-width: 200px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.custom-form-control:focus {
+  border-color: $brand-primary;
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
+}
+
+.custom-btn.categories  {
+  @include btn-style(transparent, #333, 1px solid #ced4da);
+  border-right: 0 !important;
+  height: 38px;
+}
+
+.custom-btn-outline-danger {
+  background-color: transparent;
+  border-color: $brand-danger;
+  color: $brand-danger;
+}
+
+.custom-btn-outline-danger:hover {
+  border-color: $btn-danger-color-dark;
+  color: $btn-danger-color-dark;
+
+}
+
+.custom-btn.categories:hover {
+  background-color: #eaf2ff;
+  color: $brand-primary;
+}
+
+.custom-dropdown-menu li label {
+  display: block;
+  padding: 8px 16px;
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-dropdown-menu li label:hover {
+  background-color: #eaf2ff;
+  color: $brand-primary;
+}
+
+.search-btn {
+  @include btn-style($brand-primary, #fff);
+  padding: 5px 15px 7px;
+  height: 38px;
+  width: 65px;
+  border-radius: 0;
+}
+
+.search-btn:hover,
+.search-btn:active,
+.search-btn:focus,
+.search-btn:active:focus,
+.search-btn:active:hover {
+  background-color: $search-btn-color-dark;
+  border-color: $search-btn-color-dark;
+  color: #fff;
+
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: $brand-primary;
+  background-color: #f2f6ff;
+  border-radius: 4px;
+}
+
+.custom-navbar .navbar-nav li.active a.nav-link {
+  color: $brand-primary;
+  font-weight: 700;
+  border-bottom: 2px solid $brand-primary;
+  background-color: transparent;
+}
+
+.custom-navbar .navbar-nav li.active:hover a.nav-link {
+  background-color: #eaf2ff;
+}
+
+.custom-navbar .btn-icon {
+  padding: 8px 12px;
+  color: #777;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  margin-right: 10px;
+  border-radius: 6px; 
+  font-size: 1.2rem;
+}
